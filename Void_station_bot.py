@@ -17,7 +17,7 @@ app = Flask(__name__)
 # Set webhook once when app starts
 @app.before_first_request
 def set_webhook():
-    webhook_url = f"https://your-render-app-name.onrender.com/{WEBHOOK_SECRET}"
+    webhook_url = f"https://anon-deal-bot.onrender.com/{WEBHOOK_SECRET}"
     bot.remove_webhook()
     bot.set_webhook(url=webhook_url)
 
