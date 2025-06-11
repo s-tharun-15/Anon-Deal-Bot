@@ -15,7 +15,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 app = Flask(__name__)
 
 # Set webhook once when app starts
-@app_got_first_request
+@app.before_first_request
 def set_webhook():
     webhook_url = f"https://anon-deal-bot.onrender.com/{WEBHOOK_SECRET}"
     bot.remove_webhook()
