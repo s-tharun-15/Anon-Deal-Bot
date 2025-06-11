@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: Anon-Deal-Bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python Void_station_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 8190506393:AAGECvhyxoDT_ZIj1jumthW1Z95G9B8jK9o
+      - key: WEBHOOK_SECRET
+        value: 1x2yy3zzz@143
