@@ -14,6 +14,10 @@ bot = telebot.TeleBot(BOT_TOKEN)
 # Create Flask app
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Bot is running!", 200
+
 # Set webhook once when app starts
 @app.before_first_request
 def set_webhook():
